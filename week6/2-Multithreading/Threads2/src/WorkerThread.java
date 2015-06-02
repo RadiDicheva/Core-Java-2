@@ -1,11 +1,10 @@
-
 public class WorkerThread extends Thread {
 	private int row;
 	private int column;
-	private int [][] matrixA;
-	private int [][] matrixB;
-	private int [][] matrixProduct;
-	
+	private int[][] matrixA;
+	private int[][] matrixB;
+	private int[][] matrixProduct;
+
 	public WorkerThread(int row, int column, int[][] matrixA, int[][] matrixB,
 			int[][] matrixProduct) {
 		this.row = row;
@@ -16,6 +15,7 @@ public class WorkerThread extends Thread {
 	}
 
 	public void run() {
-		matrixProduct[row][column] = (matrixA[row][0] * matrixB[0][column])+ (matrixA[row][1] * matrixB[1][column]) ;
+		matrixProduct[row][column] = (matrixA[row][0] * matrixB[0][column])
+				+ (matrixA[row][1] * matrixB[1][column]);
 	}
 }
